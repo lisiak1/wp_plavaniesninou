@@ -1,0 +1,30 @@
+<div
+  class="section-container"
+  [class.dim-background]="model.dimBackground"
+  [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }"
+>
+  <div class="title">
+    <h1 class="text-primary-custom" @titleAnimation>{{ model.title }}</h1>
+    <!-- <h4 @textAnimation>{{ model.subTitle }}</h4> -->
+  </div>
+
+  <div class="content">
+    <p class="text-primary-custom2" @textAnimation>
+      {{ model.text }}
+    </p>
+  </div>
+
+  <!-- <div class="content">
+    <p @textAnimation>
+      {{ model.textBottom }}
+    </p>
+  </div> -->
+
+  <div class="button-container">
+    <button class="btn" @buttonAnimation>
+      <a class="no-style-link" routerLink="{{ model.buttonLink }}">
+        {{ model.buttonText }}
+      </a>
+    </button>
+  </div>
+</div>

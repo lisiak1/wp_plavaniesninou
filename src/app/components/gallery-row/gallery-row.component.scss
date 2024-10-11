@@ -1,0 +1,50 @@
+.gallery-section {
+  margin-top: 1rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  .content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    // color: var(--primary-color); /* Use primary color */
+    font-size: 24px; /* Adjust size as needed */
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px; /* Set width for the circular shape */
+    height: 50px; /* Set height for the circular shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .arrow i {
+    // color: var(--primary-color); /* Use primary color for the icon */
+  }
+}

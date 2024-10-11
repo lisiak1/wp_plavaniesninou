@@ -1,0 +1,14 @@
+<div
+  class="gallery-section"
+  [ngStyle]="{ 'background-image': 'url(' + currentSection.background + ')' }"
+>
+  <div class="content">
+    <!-- <h1>{{ currentSection.text }}</h1> -->
+  </div>
+  <button class="arrow left" (click)="previousSlide()">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button class="arrow right" (click)="nextSlide()">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>

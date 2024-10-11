@@ -1,0 +1,152 @@
+<div class="beggin-text">
+  <p>
+    Cez nasledovný formulár si možete odoslať rezerváciu, ktorú nasledne
+    spracujeme a budeme Vás kontaktovať.
+  </p>
+</div>
+
+<div class="reservation-form-container">
+  <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+    <div
+      class="form-group"
+      [ngClass]="{
+        'has-error':
+          reservationForm.get('date')?.invalid &&
+          reservationForm.get('date')?.touched
+      }"
+    >
+      <label for="date"><i class="fa fa-calendar"></i> Dátum</label>
+      <input
+        id="date"
+        formControlName="date"
+        type="date"
+        placeholder="Vyberte dátum"
+        lang="sk"
+      />
+      <div
+        *ngIf="
+          reservationForm.get('date')?.invalid &&
+          reservationForm.get('date')?.touched
+        "
+        class="error-message"
+      >
+        Prosím, vyberte dátum.
+      </div>
+    </div>
+
+    <div
+      class="form-group"
+      [ngClass]="{
+        'has-error':
+          reservationForm.get('eventType')?.invalid &&
+          reservationForm.get('eventType')?.touched
+      }"
+    >
+      <label for="eventType"><i class="fa fa-tag"></i> Typ udalosti</label>
+      <input
+        id="eventType"
+        formControlName="eventType"
+        type="text"
+        placeholder="Zadajte typ udalosti"
+      />
+      <div
+        *ngIf="
+          reservationForm.get('eventType')?.invalid &&
+          reservationForm.get('eventType')?.touched
+        "
+        class="error-message"
+      >
+        Prosím, zadajte typ udalosti.
+      </div>
+    </div>
+
+    <div
+      class="form-group"
+      [ngClass]="{
+        'has-error':
+          reservationForm.get('name')?.invalid &&
+          reservationForm.get('name')?.touched
+      }"
+    >
+      <label for="name"><i class="fa fa-user"></i> Meno</label>
+      <input
+        id="name"
+        formControlName="name"
+        type="text"
+        placeholder="Zadajte vaše meno"
+      />
+      <div
+        *ngIf="
+          reservationForm.get('name')?.invalid &&
+          reservationForm.get('name')?.touched
+        "
+        class="error-message"
+      >
+        Prosím, zadajte vaše meno.
+      </div>
+    </div>
+
+    <div
+      class="form-group"
+      [ngClass]="{
+        'has-error':
+          reservationForm.get('email')?.invalid &&
+          reservationForm.get('email')?.touched
+      }"
+    >
+      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+      <input
+        id="email"
+        formControlName="email"
+        type="email"
+        placeholder="Zadajte váš email"
+      />
+      <div
+        *ngIf="
+          reservationForm.get('email')?.invalid &&
+          reservationForm.get('email')?.touched
+        "
+        class="error-message"
+      >
+        Prosím, zadajte platný email.
+      </div>
+    </div>
+
+    <div
+      class="form-group"
+      [ngClass]="{
+        'has-error':
+          reservationForm.get('phone')?.invalid &&
+          reservationForm.get('phone')?.touched
+      }"
+    >
+      <label for="phone"><i class="fa fa-phone"></i> Telefónne číslo</label>
+      <input
+        id="phone"
+        formControlName="phone"
+        type="text"
+        placeholder="Zadajte vaše telefónne číslo"
+      />
+      <div
+        *ngIf="
+          reservationForm.get('phone')?.invalid &&
+          reservationForm.get('phone')?.touched
+        "
+        class="error-message"
+      >
+        Prosím, zadajte platné telefónne číslo.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message"><i class="fa fa-comment"></i> Správa</label>
+      <textarea
+        id="message"
+        formControlName="message"
+        placeholder="Zadajte správu"
+      ></textarea>
+    </div>
+
+    <button type="submit" [disabled]="reservationForm.invalid">Odoslať</button>
+  </form>
+</div>

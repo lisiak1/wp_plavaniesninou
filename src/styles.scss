@@ -1,0 +1,28 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  display: grid;
+  place-items: center; /* Center content horizontally and vertically */
+}
+
+app-root {
+  display: block;
+  width: 100%;
+}
+
+.main-container {
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  max-width: var(--max-height);
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+:root {
+  --max-height: 1680px;
+}

@@ -1,0 +1,17 @@
+.breadcrumb-container {
+  padding: 10px;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.breadcrumb-last {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.breadcrumb-separator {
+  margin: 0 5px;
+}

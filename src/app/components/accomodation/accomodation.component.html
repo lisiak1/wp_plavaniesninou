@@ -1,0 +1,59 @@
+SOme text
+
+<div class="pros-container">
+  <div class="pro-item">
+    <i class="material-icons">location_city</i>
+    <span>Very short distance from capital</span>
+  </div>
+  <div class="pro-item">
+    <i class="material-icons">nature_people</i>
+    <span>Quiet village</span>
+  </div>
+  <div class="pro-item">
+    <i class="material-icons">room_service</i>
+    <span>Very good service</span>
+  </div>
+  <div class="pro-item">
+    <i class="material-icons">hotel</i>
+    <span>Beautiful rooms</span>
+  </div>
+  <div class="pro-item">
+    <i class="material-icons">local_parking</i>
+    <span>Good parking</span>
+  </div>
+</div>
+
+<app-tiles [tiles]="tiles"></app-tiles>
+
+<iframe
+  width="100%"
+  height="500"
+  src="https://my.vpromo.sk/tour/palenica"
+  frameborder="0"
+  allowfullscreen=""
+></iframe>
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/5JvsYzOEnMQ"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+  <div
+    class="faq-item"
+    *ngFor="let faq of faqs"
+    (click)="toggleFaq(faq)"
+    (keyup.enter)="toggleFaq(faq)"
+    tabindex="0"
+    role="button"
+    [attr.aria-expanded]="faq.open"
+  >
+    <h3>{{ faq.question }}</h3>
+    <p *ngIf="faq.open">{{ faq.answer }}</p>
+  </div>
+</div>

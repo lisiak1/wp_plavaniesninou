@@ -1,0 +1,25 @@
+.covered-terrace-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(
+    100vh - var(--header-height) - var(--breadcrumb-height)
+  ); /* Full viewport height */
+}
+
+.beggin-text {
+  /* This section will take its natural height */
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-align: center;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.gallery-row {
+  flex-grow: 1; /* Allow the gallery row to grow and take up remaining space */
+  // overflow: auto; /* Add scroll if content overflows */
+  max-height: calc(100vh - 206px);
+}

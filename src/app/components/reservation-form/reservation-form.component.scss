@@ -1,0 +1,99 @@
+.beggin-text {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  text-align: center;
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.reservation-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+label i {
+  margin-right: 8px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background: #0056b3;
+}
+
+.has-error input,
+.has-error textarea {
+  border-color: #dc3545;
+}
+
+.has-error .error-message {
+  color: #dc3545;
+  font-size: 0.875em;
+}
+
+@media (max-width: 600px) {
+  .reservation-form-container {
+    padding: 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

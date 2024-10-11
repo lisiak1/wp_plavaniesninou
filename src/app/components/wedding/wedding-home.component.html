@@ -1,0 +1,75 @@
+<div *ngFor="let section of sections">
+  <app-section [model]="section"> </app-section>
+</div>
+
+<div class="stats-section mt-5">
+  <h2>Naše úspechy</h2>
+  <div class="stats">
+    <div class="stat-item">
+      <i class="fas fa-heart heart-icon medium-icon"></i>
+      <h3>{{ weddingsOrganized | number }}</h3>
+      <p>svadieb</p>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-glass-cheers cheers-icon medium-icon"></i>
+      <h3>{{ peopleAttended | number }}</h3>
+      <p>osláv</p>
+    </div>
+    <div class="stat-item">
+      <i class="fas fa-bed bed-icon medium-icon"></i>
+      <h3>{{ peopleAccommodated | number }}</h3>
+      <p>ubytovaní</p>
+    </div>
+  </div>
+</div>
+
+<div class="reviews-section mt-5">
+  <div class="reviews-container">
+    <h2>Povedali o nás</h2>
+    <div class="review-carousel">
+      <button (click)="prevReview()" class="carousel-arrow left-arrow">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="review-item">
+        <img
+          [src]="reviews[currentReview].photo"
+          alt="Reviewer photo"
+          class="review-photo"
+        />
+        <p class="review-text">{{ reviews[currentReview].text }}</p>
+        <div class="stars">
+          <i
+            *ngFor="let star of [1, 2, 3, 4, 5]"
+            class="material-icons"
+            [ngClass]="{
+              filled: star <= reviews[currentReview].rating,
+              outlined: star > reviews[currentReview].rating
+            }"
+            >{{
+              star <= reviews[currentReview].rating ? "star" : "star_border"
+            }}</i
+          >
+        </div>
+      </div>
+      <button (click)="nextReview()" class="carousel-arrow right-arrow">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="faq-section mt-5">
+  <h2>Často kladené otázky</h2>
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let faq of faqs">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ faq.question }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="faq-answer">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
