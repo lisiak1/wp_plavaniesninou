@@ -5,6 +5,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 0;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   display: grid;
   place-items: center; /* Center content horizontally and vertically */
@@ -17,12 +18,12 @@ app-root {
 
 .main-container {
   display: block;
-  min-height: 100vh;
   width: 100%;
-  max-width: var(--max-height);
+  max-width: var(--max-width);
   margin: 0 auto; /* Center the container horizontally */
 }
 
 :root {
-  --max-height: 2680px;
+  --max-width: 2800px;
+  --header-height: 60px;
 }
