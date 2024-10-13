@@ -6,21 +6,6 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  display: grid;
-  place-items: center; /* Center content horizontally and vertically */
-}
-
-app-root {
-  display: block;
-  width: 100%;
-}
-
-.main-container {
-  display: block;
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto; /* Center the container horizontally */
 }
 
 :root {
